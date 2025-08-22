@@ -1,6 +1,6 @@
 # 📈 AI Financial Analyst Agent
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]([YOUR_DEPLOYED_APP_URL_HERE](https://ai-finance-agent-db5n2bqkjavcunle5cugr9.streamlit.app/))
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ai-finance-agent-db5n2bqkjavcunle5cugr9.streamlit.app/)
 
 An intelligent agent that delivers real-time financial briefings for user-selected stocks by orchestrating multiple tools and synthesizing data with a Large Language Model.
 
@@ -24,7 +24,7 @@ This system uses a modular, agentic architecture where a Streamlit front-end tri
 
 ---
 
-### ## 🛠️ Tech Stack
+###  🛠️ Tech Stack
 
 - **Backend & Orchestration:** Python, LangChain (conceptual)
 - **AI/ML:** Google Gemini 1.5 Pro, Hugging Face Transformers (FinBERT)
@@ -34,11 +34,11 @@ This system uses a modular, agentic architecture where a Streamlit front-end tri
 
 ---
 
-### ## 📦 Setup & Installation
+###  📦 Setup & Installation
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/YOUR_USERNAME/financial-agent.git](https://github.com/YOUR_USERNAME/financial-agent.git)
+    git clone [https://github.com/Th3CtrLKeY/ai-finance-agent.git](https://github.com/Th3CtrLKeY/ai-finance-agent.git)
     cd financial-agent
     ```
 
@@ -64,10 +64,11 @@ This system uses a modular, agentic architecture where a Streamlit front-end tri
 
 ---
 
-### ## 🔮 Future Improvements
+### 🔮 Future Improvements
 
 - [ ] **Historical Data Visualization:** Integrate Plotly to display interactive charts of stock performance over time.
 - [ ] **Expanded Data Sources:** Incorporate sentiment from Twitter/X for a more holistic view.
 - [ ] **Personalized Alerts:** Add a feature to send email alerts if the sentiment for a stock changes dramatically.
+
 
 
