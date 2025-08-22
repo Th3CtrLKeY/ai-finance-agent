@@ -1,6 +1,6 @@
 # 📈 AI Financial Analyst Agent
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](YOUR_DEPLOYED_APP_URL_HERE)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]([YOUR_DEPLOYED_APP_URL_HERE](https://ai-finance-agent-db5n2bqkjavcunle5cugr9.streamlit.app/))
 
 An intelligent agent that delivers real-time financial briefings for user-selected stocks by orchestrating multiple tools and synthesizing data with a Large Language Model.
 
@@ -14,7 +14,7 @@ An intelligent agent that delivers real-time financial briefings for user-select
 
 ---
 
-### ## 🚀 Overview
+###  🚀 Overview
 
 This project was built to solve the problem of information overload for retail investors. The agent automates the tedious process of gathering and analyzing market data by:
 1.  Fetching real-time stock prices.
@@ -24,11 +24,11 @@ This project was built to solve the problem of information overload for retail i
 
 ---
 
-### ## ⚙️ System Architecture
+###  ⚙️ System Architecture
 
 The agent uses a modular, multi-tool design. The main orchestrator (`agent.py`) dynamically calls specialized tools to gather information before synthesizing the final report.
 
-*(Create a simple diagram using a free tool like [diagrams.net](https://app.diagrams.net), export it as a PNG, add it to your `assets` folder, and embed it here.)*
+This system uses a modular, agentic architecture where a Streamlit front-end triggers a Python-based orchestrator to dynamically call specialized tools for data fetching (APIs) and sentiment analysis (FinBERT). The collected data is then synthesized by the Gemini Pro LLM to generate and display a comprehensive financial report
 
 ![System Architecture Diagram](assets/architecture.png)
 
@@ -79,3 +79,4 @@ The agent uses a modular, multi-tool design. The main orchestrator (`agent.py`) 
 - [ ] **Historical Data Visualization:** Integrate Plotly to display interactive charts of stock performance over time.
 - [ ] **Expanded Data Sources:** Incorporate sentiment from Twitter/X for a more holistic view.
 - [ ] **Personalized Alerts:** Add a feature to send email alerts if the sentiment for a stock changes dramatically.
+
