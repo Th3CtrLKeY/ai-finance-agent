@@ -9,7 +9,7 @@ from .tools.sentiment_analyzer import SentimentAnalyzer
 from .tools.price_fetcher import get_stock_prices
 from .tools.news_fetcher import get_company_news
 
-def run_agent():
+def run_agent(portfolio_df):
     """
     The main function to run the financial agent.
     """
@@ -20,21 +20,23 @@ def run_agent():
     sentiment_analyzer = SentimentAnalyzer()
     # print("Starting the financial Agent...")
     
-    portfolio_path = 'data/portfolio.csv'
     news_api_key = os.getenv("NEWS_API_KEY")
 
     # print("🚀 Starting the Financial Agent...")
+    
+    #create a list of stock symbols from the DataFrame
+    stock_symbols = portfolio_df['StockSymbol'].tolist()
 
-    # --- 2. Data Gathering using Tools ---
-    # print("   - Reading portfolio...")
-    try:
-        portfolio_df = pd.read_csv(portfolio_path)
-    except FileNotFoundError:
-        print(f"Error: Portfolio file not found at {portfolio_path}")
-        return
+    #create a temp file to pass symbols to the price fetcher (better way: refactore the price fetcher)
+    stock_prices = {}
+    for symbol in stock_symbols:
+        try:
+            ticker = yf.Ticker(symbol)
+            price = ticker.history(period="1d")['Close'].iloc[0]
+            stock_prices[symbol] = round(price, 2)
+        except Exception as e:
+            stock_prices[symbol] = "N/A"
 
-    # print("   - Fetching latest stock prices...")
-    stock_prices = get_stock_prices(portfolio_path)
     
     all_news = []
     # print("   - Fetching company news...")
@@ -89,5 +91,10 @@ def run_agent():
 
 
 if __name__ == "__main__":
-    final_report = run_agent()
+    # To test this file directly, you now need to create a DataFrame manually
+    test_portfolio_df = pd.DataFrame({
+        "StockSymbol": ["RELIANCE.NS", "TCS.NS"],
+        "CompanyName": ["Reliance Industries", "Tata Consultancy Services"]
+    })
+    final_report = run_agent(test_portfolio_df)
     print(final_report)
