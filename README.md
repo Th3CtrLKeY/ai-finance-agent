@@ -4,16 +4,6 @@
 
 An intelligent agent that delivers real-time financial briefings for user-selected stocks by orchestrating multiple tools and synthesizing data with a Large Language Model.
 
----
-
-### ✨ App Demo
-
-*(Pro Tip: Record a short GIF of your app in action using a tool like Giphy Capture or ScreenToGif and embed it here. It's highly effective!)*
-
-
-
----
-
 ###  🚀 Overview
 
 This project was built to solve the problem of information overload for retail investors. The agent automates the tedious process of gathering and analyzing market data by:
@@ -30,7 +20,7 @@ The agent uses a modular, multi-tool design. The main orchestrator (`agent.py`) 
 
 This system uses a modular, agentic architecture where a Streamlit front-end triggers a Python-based orchestrator to dynamically call specialized tools for data fetching (APIs) and sentiment analysis (FinBERT). The collected data is then synthesized by the Gemini Pro LLM to generate and display a comprehensive financial report
 
-![System Architecture Diagram](assets/architecture.png)
+![System Architecture Diagram](assets/ai-finance-agent.png)
 
 ---
 
@@ -79,4 +69,5 @@ This system uses a modular, agentic architecture where a Streamlit front-end tri
 - [ ] **Historical Data Visualization:** Integrate Plotly to display interactive charts of stock performance over time.
 - [ ] **Expanded Data Sources:** Incorporate sentiment from Twitter/X for a more holistic view.
 - [ ] **Personalized Alerts:** Add a feature to send email alerts if the sentiment for a stock changes dramatically.
+
 
